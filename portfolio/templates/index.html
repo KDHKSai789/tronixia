@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+<h1>Dindi Sai Portfolio</h1>
+</header>
+
+<section class="hero">
+
+<h2>Hello, I'm Dindi Sai</h2>
+<p>Full Stack Developer</p>
+
+</section>
+
+<section>
+
+<h2>Contact Me</h2>
+
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+<textarea id="message" placeholder="Message"></textarea>
+
+<button onclick="send()">Send</button>
+
+<p id="status"></p>
+
+</section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
