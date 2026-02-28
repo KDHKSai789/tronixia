@@ -1,0 +1,140 @@
+NOTES API TESTING INSTRUCTIONS (POSTMAN GUIDE)
+
+--------------------------------------------
+STEP 1: Start the API Server
+--------------------------------------------
+
+Open terminal and run:
+
+cd notes-api
+source venv/bin/activate
+python app.py
+
+Server will start at:
+http://127.0.0.1:5000
+
+
+--------------------------------------------
+STEP 2: Open Postman or Postman-like Tool
+--------------------------------------------
+
+Examples:
+- Postman Desktop App
+- Thunder Client (VS Code)
+- Browser REST Client Extension
+
+
+--------------------------------------------
+STEP 3: Test GET All Notes
+--------------------------------------------
+
+Method: GET
+
+URL:
+http://127.0.0.1:5000/notes
+
+Click Send
+
+Expected response:
+[]
+
+
+--------------------------------------------
+STEP 4: Test CREATE Note
+--------------------------------------------
+
+Method: POST
+
+URL:
+http://127.0.0.1:5000/notes
+
+Select Body → JSON
+
+Enter:
+
+{
+  "title": "Test Note",
+  "content": "This is a test note"
+}
+
+Click Send
+
+Expected response:
+
+{
+  "message": "Note created",
+  "id": 1
+}
+
+
+--------------------------------------------
+STEP 5: Test GET Notes Again
+--------------------------------------------
+
+Method: GET
+
+URL:
+http://127.0.0.1:5000/notes
+
+Expected response:
+
+[
+  {
+    "id": 1,
+    "title": "Test Note",
+    "content": "This is a test note"
+  }
+]
+
+
+--------------------------------------------
+STEP 6: Test UPDATE Note
+--------------------------------------------
+
+Method: PUT
+
+URL:
+http://127.0.0.1:5000/notes/1
+
+Body → JSON:
+
+{
+  "title": "Updated Note",
+  "content": "Updated content"
+}
+
+Expected response:
+{
+  "message": "Updated"
+}
+
+
+--------------------------------------------
+STEP 7: Test DELETE Note
+--------------------------------------------
+
+Method: DELETE
+
+URL:
+http://127.0.0.1:5000/notes/1
+
+Expected response:
+{
+  "message": "Deleted"
+}
+
+
+--------------------------------------------
+SUMMARY OF ENDPOINTS
+--------------------------------------------
+
+GET      /notes
+POST     /notes
+GET      /notes/{id}
+PUT      /notes/{id}
+DELETE   /notes/{id}
+
+
+--------------------------------------------
+INTERNSHIP TASK SUBMISSION FILE
+--------------------------------------------

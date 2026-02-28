@@ -1,0 +1,7 @@
+NOTES API TEST GUIDE
+
+POST    /notes
+GET     /notes
+GET     /notes/{id}
+PUT     /notes/{id}
+DELETE  /notes/{id}

@@ -1,0 +1,15 @@
+{
+ "info": {
+  "name": "Notes API",
+  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+ },
+ "item": [
+  {
+   "name": "Get Notes",
+   "request": {
+    "method": "GET",
+    "url": "http://127.0.0.1:5000/notes"
+   }
+  }
+ ]
+}
