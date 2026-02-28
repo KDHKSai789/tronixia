@@ -1,0 +1,17 @@
+USER AUTHENTICATION SYSTEM
+
+Features:
+- User registration
+- User login
+- Password encryption
+- Session management
+- Protected dashboard
+
+Run:
+
+cd authentication
+source venv/bin/activate
+python app.py
+
+Open browser:
+http://127.0.0.1:5000
